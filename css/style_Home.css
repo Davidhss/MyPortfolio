@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(180deg, #212121, #181818, #212121);
+    overflow-x: hidden;
+}
+
+#comeco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 3rem;
+}
+
+.meu_nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.meu_nome span,
+.meu_nome div {
+    font-family: 'Fira Code', monospace;
+    color: white;
+    font-size: 2.5rem;
+    text-align: right;
+}
+
+.meu_nome span {
+    border-right: solid 2px;
+    animation: cursor_piscando .3s linear .5s infinite alternate;
+}
+
+@keyframes cursor_piscando {
+    from {
+        border-right: solid 2px white;
+    }
+
+    to {
+        border-right: solid 2px #212121;
+    }
+}
+
+/* Barra de Divisão */
+.barra {
+    background-color: white;
+    width: .1rem;
+    height: 30rem;
+}
+
+/* NavBar Lateral */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    font-size: 2.5rem;
+    transition: .3s;
+    cursor: default;
+}
+
+nav a:hover {
+    letter-spacing: 2px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 0px;
+}
+
+.arrow i {
+    height: 50px;
+    color: white;
+    cursor: default;
+}
+
+@media (max-width: 1000px) {
+    .barra {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+
+
+/* Sobre */
+
+#sobre {
+    height: 100vh;
+    width: 100vw;
+    margin: 10rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 4.5rem;
+    position: relative;
+}
+
+.inicio_sobre p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.inicio_sobre h1 {
+    font-size: 3rem;
+    background-image: linear-gradient(to bottom right, #E8BA17, #E8360F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+
+.info_sobre {
+    display: flex;
+    padding: .9rem 0;
+    gap: 20px;
+    color: white
+}
+
+.info_sobre .idade i,
+.info_sobre .local i {
+    background-image: linear-gradient(to bottom right, #E8BA17, #E8360F);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0 5px;
+}
+
+
+
+.photo-side {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.photo-side .contato {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.photo-side .photo {
+    position: relative;
+    height: 14rem;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-side .photo #David {
+    position: absolute;
+    width: 13rem;
+}
+
+.photo-side .photo #Fundo {
+    width: 16rem;
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.544));
+    z-index: -1;
+}
+
+.photo-side .social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photo-side .social a {
+    font-size: 3.2rem;
+    color: #727272;
+    transition: .5s;
+    cursor: default;
+}
+
+.photo-side .social a:hover {
+    color: #FFFFFF;
+}
+
+.botao_email {
+    background-image: linear-gradient(to left, #E8BA17, #E8360F);
+    color: white;
+    width: 20rem;
+    height: 2.6rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s ease-in-out;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.botao_email:hover {
+    letter-spacing: 1.5px;
+}
+
+.copiado {
+    background-image: linear-gradient(to left, #1ee817, #0a951a);
+    color: white;
+    width: 20rem;
+    height: 2.6rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s ease-in-out;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+
+.formacao .divisao_formacao {
+    color: #727272;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 0;
+}
+
+.formacao .divisao_formacao div {
+    width: 14.3rem;
+    height: 0.12rem;
+    background-color: #727272;
+    margin-top: 5px;
+}
+
+.cursos {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.cursos .atual {
+    background: #373737;
+    border-radius: 10px;
+}
+
+.cursos .topico_curso .texto_curso p{
+    display: none;
+}
+
+.cursos .topico_curso {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: .8rem 1rem;
+}
+
+.cursos .topico_curso i {
+    color: #707070;
+    font-size: 1.2rem;
+}
+
+.cursos .topico_curso .texto_curso {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: .5px;
+}
+
+@media (min-width: 1100px) {
+    #sobre{
+        align-items: center;
+        justify-content: center;
+    }
+    .conteudo-sobre {
+        display: flex;
+        background-color: #202020;
+        padding: 50px 100px;
+        border-radius: 10px;
+        gap: 50px;
+    }
+
+    .photo-side .contato {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .photo-side .social {
+        flex-direction: row;
+        gap: 40px;
+
+    }
+
+    .photo-side .photo {
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .photo-side .photo #David {
+        width: 16rem;
+        z-index: 3;
+    }
+
+    .photo-side .photo #Fundo {
+        width: 18rem;
+        z-index: 2;
+    }
+
+    .botao_email {
+        width: 14rem;
+        height: 2.6rem;
+        font-size: 1rem;
+    }
+    
+    .botao_email:hover {
+        letter-spacing: 1.5px;
+    }
+    
+    .copiado {
+        width: 14rem;
+        height: 2.6rem;
+        font-size: 1rem;
+    }
+
+    .texto_curso{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .cursos .topico_curso .texto_curso p{
+        display: block;
+        font-weight: 500;
+        font-size: .7rem;
+    }
+
+    .cursos .topico_curso .texto_curso .atual_curso{
+        background-image: linear-gradient(to left bottom, #E8BA17, #E8360F);
+        background-clip: text;
+    -webkit-background-clip: text;
+        color: transparent;
+        font-weight: 800;
+        font-size: .8rem;
+    }
+}
