@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: linear-gradient(180deg, #212121, #181818, #212121);
+    background-image: linear-gradient(180deg, #181818, #212121, #181818);
     overflow-x: hidden;
 }
 
@@ -79,12 +79,14 @@ nav a:hover {
 .arrow {
     position: absolute;
     bottom: 0px;
+
 }
 
 .arrow i {
     height: 50px;
     color: white;
     cursor: default;
+    padding: 25px;
 }
 
 @media (max-width: 1000px) {
@@ -292,7 +294,7 @@ nav a:hover {
     }
     .conteudo-sobre {
         display: flex;
-        background-color: #202020;
+        background-color: #252525;
         padding: 50px 100px;
         border-radius: 10px;
         gap: 50px;
@@ -362,4 +364,98 @@ nav a:hover {
         font-weight: 800;
         font-size: .8rem;
     }
+}
+
+
+/* Habilidades */
+
+#habilidades {
+    height: 100vh;
+    width: 100vw;
+    margin: 10rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 4.5rem;
+    position: relative;
+}
+
+.conteudo-hab .titulo_hab{
+    height: 6rem;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.conteudo-hab .titulo_hab h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+     background: linear-gradient(10deg, #E8BA17 0%, #E8360F 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+}
+.conteudo-hab .titulo_hab span{
+    color: rgba(113, 113, 113, 0.15);
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+}
+
+.conteudo-hab .cards-habilidades{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 50px;
+}
+.conteudo-hab .cards-habilidades .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-image: linear-gradient(45deg, #1E1E1E, #2D2D2D, #1E1E1E);
+    border-radius: 10px;
+    transition: .3s;
+}
+.conteudo-hab .cards-habilidades .card:hover{
+    width: 85px;
+    height: 85px;
+    background-image: linear-gradient(45deg, #e8bb17 0%, #e8370f 100%);
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.40);
+}
+.conteudo-hab .cards-habilidades .card i{
+    font-size: 2.3rem;
+    color: #dddddd;
+}
+.conteudo-hab .cards-habilidades .card span{
+    display: none;
+}
+
+#habilidades .brilho_right{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background: #E8BA17;
+    filter: blur(160px);
+    top: 23rem;
+    right: -10rem;
+    z-index: -99;
+}
+#habilidades .brilho_left{
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background: #E8360F;
+    filter: blur(160px);
+    top: 35rem;
+    left: -14rem;
+    z-index: -99;
 }
